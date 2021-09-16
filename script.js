@@ -1,13 +1,12 @@
-const picture = document.querySelector(".slider__imge");
+const img = document.querySelector(".slider__image");
 
-const pictureArr = ["./img/html.jpg", "./img/css.jpg", "./img/js.jpeg"]; 
+const imgArr = ["./img/html.jpg", "./img/css.jpg", "./img/js.jpeg"]; 
 // Почему ./ ?
 
 let currentIndex = 0;
 
 function slide(direction) {
     currentIndex += direction;
-    picture.src = pictureArr[currentIndex];
+    img.src = imgArr[currentIndex];
 }
 
-//Подчеркнутые const и let?
