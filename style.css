@@ -1,6 +1,14 @@
+.heading {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;  
+}
+
 .slider {
-    width: 500px;
-    height: 250px;
+    max-width: 500px;
+    width: 100%;    
+    margin: 1rem auto 3rem auto;    
 }
 
 .slider__container {
@@ -19,3 +27,41 @@
     text-align: center;
 }
 
+.slider__dots {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.slider__dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(223, 137, 137);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.slider__dot.active,
+.slider__dot:hover {
+   background-color: #e43434;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider__nav {
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
