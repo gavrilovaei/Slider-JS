@@ -20,7 +20,6 @@ slide(currentIndex);
 const img_2 = document.querySelector(".slider__image_2");
 
 const dots = document.querySelectorAll('.slider__dot');
-// Выборка точек
 
 function changeSlide(index) {
 
@@ -32,14 +31,11 @@ function changeSlide(index) {
     img_2.src = imgArr[index];
     updateDots(index);
 }
-// Функция, отвечающая за смену слайдов.
 
 function changeIndex(ind) {
     currentIndex = ind;
-    changeSlide(currentIndex);
+    changeSlide(currentIndex);    
 }
-// Ф-ция, изменяющая текущий индекс в соответствии с обработчиком на кнопках-точках и передающая его ф-ции смены слайдов
-// _______________________________ 
 
 // Чтобы менять класс active между кнопками мы:
 // будеь проходится по массиву dots
@@ -53,13 +49,44 @@ function updateDots(index) {
     dots[index].classList.add('active');
 }
 // Добавим вызов этой функции в конец функции changeSlide - т.е. поменяли слайд и следом обновляем вид точек
-// ________________________________________________
+
 
 // Третий слайдер - и стрелки и точки вместе:
 
+const img_3 = document.querySelector(".slider__image_3");
 
+const dot_3s = document.querySelectorAll('.slider__dot_3');
+// Выборка точек
 
+let currentIndex_3 = 0;
 
+function changeIndex_3 (ind_3) {
+   currentIndex_3 = ind_3;
+   slide_3(currentIndex_3);   
+}
+
+function nextIndex(direction_3) {
+    currentIndex_3 += direction_3;
+    if (currentIndex_3 >= imgArr.length) {
+        currentIndex_3 = 0;
+    } else if (currentIndex_3 < 0) {
+            currentIndex_3 = imgArr.length - 1;
+        }   
+   slide_3(currentIndex_3);  
+}
+
+function slide_3(index) {    
+         
+    img_3.src = imgArr[currentIndex_3];
+    updateDot_3s(index);
+}
+
+function updateDot_3s(index) {
+    for (let dot_3 of dot_3s) {
+        dot_3.classList.remove('active');
+    }
+    dot_3s[index].classList.add('active');
+}
 
 
 
