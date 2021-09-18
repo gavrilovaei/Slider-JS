@@ -23,6 +23,12 @@ const dots = document.querySelectorAll('.slider__dot');
 // Выборка точек
 
 function changeSlide(index) {
+
+    img_2.style.display = "none";
+    setTimeout( () => {
+        img_2.style.display = "block";
+    });
+
     img_2.src = imgArr[index];
     updateDots(index);
 }
