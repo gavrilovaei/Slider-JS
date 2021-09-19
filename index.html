@@ -12,51 +12,28 @@
 <body>
     <div class="heading">
         <h1>Slider JS</h1>
-    </div>
-    <div class="slider slider_1">
+    </div>    
+
+    <div class="slider">
 
         <div class="slider__container">
-            <img class="slider__image slider__image_1" src="img/html.jpg" alt="html">
-        </div>
+            <img class="slider__image" src="img/html.jpg" alt="technology">
+        </div> 
 
         <div class="slider__controls">
-            
-            <button class="slider__nav slider__nav-left" onclick="slide(-1)">&lt;</button>
-            <button class="slider__nav slider__nav-right" onclick="slide(1)">&gt;</button>
-        </div>
-    </div>
 
-
-    <div class="slider slider_2">
-        <div class="slider__container">
-            <img class="slider__image slider__image_2 fade" src="img/html.jpg" alt="html">
-        </div>
-        <div class="slider__controls">
             <div class="slider__dots">
-                <span class="slider__dot active" onclick="changeIndex(0)"></span>
-                <span class="slider__dot" onclick="changeIndex(1)"></span>
-                <span class="slider__dot" onclick="changeIndex(2)"></span>
+                <span class="slider__dot active" onclick="hendleDotClick(0)"></span>
+                <span class="slider__dot" onclick="hendleDotClick(1)"></span>
+                <span class="slider__dot" onclick="hendleDotClick(2)"></span>
             </div>
-           
-        </div>
-    </div>
 
-    <div class="slider slider_3">
+            <button class="slider__nav slider__nav-left" onclick="hendleArrowClick(-1)">&lt;</button>
+            <button class="slider__nav slider__nav-right" onclick="hendleArrowClick(1)">&gt;</button>
 
-        <div class="slider__container">
-            <img class="slider__image slider__image_3" src="img/html.jpg" alt="html">
         </div>
+    </div>   
 
-        <div class="slider__controls">
-            <div class="slider__dot_3s">
-                <span class="slider__dot_3 active" onclick="changeIndex_3(0)"></span>
-                <span class="slider__dot_3" onclick="changeIndex_3(1)"></span>
-                <span class="slider__dot_3" onclick="changeIndex_3(2)"></span>
-            </div>
-            <button class="slider__nav slider__nav-left" onclick="nextIndex(-1)">&lt;</button>
-            <button class="slider__nav slider__nav-right" onclick="nextIndex(1)">&gt;</button>           
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 

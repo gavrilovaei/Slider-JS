@@ -27,14 +27,12 @@
     text-align: center;
 }
 
-.slider__dots,
-.slider__dot_3s {
+.slider__dots {
     padding: 1rem 0;
     text-align: center;
 }
 
-.slider__dot,
-.slider__dot_3 {
+.slider__dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -45,9 +43,7 @@
 }
 
 .slider__dot.active,
-.slider__dot:hover,
-.slider__dot_3.active,
-.slider__dot_3:hover {
+.slider__dot:hover {
    background-color: #e43434;
 }
 
